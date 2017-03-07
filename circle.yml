@@ -1,0 +1,17 @@
+machine:
+
+  node:
+    version:
+      6.5.0
+
+dependencies:
+  pre:
+    - npm install -g grunt-cli # install from a different package manager
+    - npm --version # use a custom version of bundler
+    - npm install
+  override:
+    - npm update
+test:
+  override:
+    - npm update
+    - npm run test
