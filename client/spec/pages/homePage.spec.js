@@ -43,7 +43,7 @@ describe('The Home Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
-      expect(page.$el).toContainText('Hello, World!');
+      expect(page.$el).toContainText('Hello, Team Green!');
     });
 
     it('returns the view object', () => {
