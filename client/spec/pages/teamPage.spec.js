@@ -19,6 +19,11 @@ describe('Check-in dance', () => {
     it('should include the text "Elena"', () => {
       expect(page.$el).toContainText('Elena');
     });
+
+    it('should include the text "Bea"', () => {
+      expect(page.$el).toContainText('Bea');
+    });
+
     // TODO: Add a test to check for your name
   });
 });
