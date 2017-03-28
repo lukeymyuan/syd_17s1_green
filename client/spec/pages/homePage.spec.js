@@ -21,6 +21,15 @@ describe('The Home Page', () => {
       });
     });
 
+    describe('left', () => {
+      it('should take the user to the response page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('response');
+      });
+    });
+
     describe('top', () => {
       it('should scroll the watch face up', () => {
         spyOn(page, 'scrollUp');

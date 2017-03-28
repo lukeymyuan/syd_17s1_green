@@ -2,6 +2,7 @@ const page404 = require('./404Page');
 const team = require('./teamPage');
 const home = require('./homePage');
 const contacts = require('./contactsPage');
+const response = require('./responsePage');
 const eventsList = require('./eventsList');
 const eventDetails = require('./eventDetails');
 
@@ -13,4 +14,5 @@ module.exports = {
   contacts,
   eventsList,
   eventDetails,
+  response,
 };
