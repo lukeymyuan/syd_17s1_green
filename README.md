@@ -1,4 +1,4 @@
-# LevelUp Watch Edition App Development Environment
+# LevelUp Watch Edition App Development Environment Green Team
 
 [Build Status](https://circleci.com/gh/twlevelup/syd_17s1_green)
 

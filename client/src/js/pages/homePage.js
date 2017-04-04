@@ -13,7 +13,7 @@ const homePage = Page.extend({
     right: 'goToMoodPage',
     top: 'scrollUp',
     bottom: 'scrollDown',
-    left: 'goToMoodPage',
+    left: 'goToResponse',
   },
 
   goToContacts() {
@@ -30,6 +30,10 @@ const homePage = Page.extend({
 
   scrollDown() {
     $('#watch-face').animate({ scrollTop: '+=70px' });
+  },
+
+  goToResponse() {
+    window.App.navigate('response');
   },
 
   render() {
