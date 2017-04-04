@@ -64,12 +64,4 @@ describe('The Home Page', () => {
       expect(page.render()).toEqual(page);
     });
   });
-  describe('left', () => {
-    it('should take the user to the demo page', () => {
-      spyOn(window.App, 'navigate');
-      page.configureButtons();
-      eventHub.trigger('left');
-      expect(window.App.navigate).toHaveBeenCalledWith('demo');
-    });
-  });
 });
