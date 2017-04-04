@@ -10,13 +10,22 @@ const responsePage = Page.extend({
 
   template,
 
-  responses: {
-    0: ['response 0.0', 'response 0.1', 'response 0.2'],
-    1: ['response 1.0', 'response 1.1'],
-    2: ['response 2.0', 'response 2.1', 'response 2.2'],
-    3: ['response 3.0', 'response 3.1', 'response 3.2', 'response 3.3'],
-    4: ['response 4.0', 'response 4.1', 'response 4.2'],
+  buttonEvents: {
+    face: 'goToHomePage',
   },
+
+  responses: {
+    0: ['response 0.0', 'response 0.1', 'response 0.2'], // don't record
+    1: ['Go and seek help, call 123456'],                 // very sad
+    2: ['I hope you feel better soon'], // slightly sad
+    3: ['Good to know'], // slightly happy
+    4: ['Awesome'], // very happy
+  },
+
+  goToHomePage() {
+    window.App.navigate('home');
+  },
+
   render() {
     option = 1; // This changes depending on option selected
     // Generate an index between 0 - 2
