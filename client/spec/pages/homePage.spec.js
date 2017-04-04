@@ -38,7 +38,16 @@ describe('The Home Page', () => {
         expect(page.scrollUp).toHaveBeenCalled();
       });
     });
-
+/*
+    describe('face', () => {
+      it('should load message 0', () => {
+        spyOn(page, 'updateMessage');
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(page.$el).toContainHtml('Message 0');
+      });
+    });
+*/
     describe('bottom', () => {
       it('should scroll the watch face down', () => {
         spyOn(page, 'scrollDown');
