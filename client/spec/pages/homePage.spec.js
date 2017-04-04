@@ -52,11 +52,24 @@ describe('The Home Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
-      expect(page.$el).toContainText('Hello, Team Green!');
+      // expect(page.$el).toContainText('Positive Message');
+    });
+
+    it('should pass a variable message', () => {
+      page.render();
+      expect(page.$el).toContainHtml('Variable Positive Message');
     });
 
     it('returns the view object', () => {
       expect(page.render()).toEqual(page);
+    });
+  });
+  describe('left', () => {
+    it('should take the user to the demo page', () => {
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('left');
+      expect(window.App.navigate).toHaveBeenCalledWith('demo');
     });
   });
 });

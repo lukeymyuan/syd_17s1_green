@@ -37,8 +37,11 @@ const homePage = Page.extend({
   },
 
   render() {
-    this.$el.html(this.template());
+    this.$el.html(this.template({ message: 'Variable Positive Message' }));
     return this;
+  },
+  goToMyDemoPage() {
+    window.App.navigate('demo');
   },
 
 });
