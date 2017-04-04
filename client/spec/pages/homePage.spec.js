@@ -49,15 +49,6 @@ describe('The Home Page', () => {
     });
   });
 
-  describe('left', () => {
-    it('should take the user to the mood page', () => {
-      spyOn(window.App, 'navigate');
-      page.configureButtons();
-      eventHub.trigger('left');
-      expect(window.App.navigate).toHaveBeenCalledWith('mood');
-    });
-  });
-
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
