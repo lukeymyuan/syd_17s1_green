@@ -10,13 +10,18 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToContacts',
+    right: 'goToMoodPage',
     top: 'scrollUp',
     bottom: 'scrollDown',
+    left: 'goToMoodPage',
   },
 
   goToContacts() {
     window.App.navigate('contacts');
+  },
+
+  goToMoodPage() {
+    window.App.navigate('mood');
   },
 
   scrollUp() {
