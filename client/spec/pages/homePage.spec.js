@@ -38,7 +38,16 @@ describe('The Home Page', () => {
         expect(page.scrollUp).toHaveBeenCalled();
       });
     });
-
+/*
+    describe('face', () => {
+      it('should load message 0', () => {
+        spyOn(page, 'updateMessage');
+        page.configureButtons();
+        eventHub.trigger('face');
+        expect(page.$el).toContainHtml('Message 0');
+      });
+    });
+*/
     describe('bottom', () => {
       it('should scroll the watch face down', () => {
         spyOn(page, 'scrollDown');
@@ -52,7 +61,12 @@ describe('The Home Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
-      expect(page.$el).toContainText('Hello, Team Green!');
+      // expect(page.$el).toContainText('Positive Message');
+    });
+
+    it('should pass a variable message', () => {
+      page.render();
+      expect(page.$el).toContainHtml('Variable Positive Message');
     });
 
     it('returns the view object', () => {

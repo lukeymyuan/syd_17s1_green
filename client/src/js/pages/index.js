@@ -6,6 +6,7 @@ const response = require('./responsePage');
 const eventsList = require('./eventsList');
 const eventDetails = require('./eventDetails');
 const mood = require('./moodPage');
+const tap = require('./tapPage');
 
 // TODO autogenerate this file
 module.exports = {
@@ -17,4 +18,5 @@ module.exports = {
   eventDetails,
   mood,
   response,
+  tap,
 };

@@ -17,7 +17,7 @@ const Router = Backbone.Router.extend({
   },
 
   defaultRoute(urlFragment) {
-    const pageName = (!urlFragment) ? 'home' : urlFragment;
+    const pageName = (!urlFragment) ? 'tap' : urlFragment;
     const page = this.pages[pageName] || this.pages['404'];
     window.App.showPage(page);
   },
