@@ -2,8 +2,6 @@ const MoodPage = require('../../src/js/pages/moodPage');
 const eventHub = require('watch_framework').EventHub;
 const storage = require('../../src/storage');
 
-// let mood = [];
-
 let page;
 
 describe('The Mood Page', () => {

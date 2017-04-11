@@ -1,4 +1,5 @@
 const Page = require('watch_framework').Page;
+const storage = require('../../storage');
 
 const template = require('../../templates/pages/responsePage.hbs');
 
@@ -27,7 +28,8 @@ const responsePage = Page.extend({
   },
 
   render() {
-    option = 1; // This changes depending on option selected
+    const storageLen = storage.myData.mood.length - 1;
+    option = storage.myData.mood[storageLen]; // This changes depending on option selected
     // Generate an index between 0 - 2
     const len = this.responses[option].length;
     const index = Math.floor(Math.random() * len);
