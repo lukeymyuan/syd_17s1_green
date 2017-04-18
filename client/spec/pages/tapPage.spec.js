@@ -31,6 +31,15 @@ describe('The Tap Page', () => {
         expect(window.App.navigate).toHaveBeenCalledWith('reporting');
       });
     });
+
+    describe('right', () => {
+      it('should take the user to the settings page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('right');
+        expect(window.App.navigate).toHaveBeenCalledWith('settings');
+      });
+    });
   });
   describe('rendering', () => {
     it('should produce the correct HTML', () => {

@@ -8,9 +8,14 @@ const tapPage = Page.extend({
   buttonEvents: {
     bottom: 'goToReportingPage',
     face: 'goToMessage',
+    right: 'goToSettings',
   },
   goToMessage() {
     window.App.navigate('home');
+  },
+
+  goToSettings() {
+    window.App.navigate('settings');
   },
 
   goToReportingPage() {

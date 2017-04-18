@@ -9,6 +9,7 @@ const mood = require('./moodPage');
 const tap = require('./tapPage');
 const reporting = require('./reportingSelectionPage');
 const reportingDetails = require('./reportingDetailsPage');
+const settings = require('./settingsPage');
 
 // TODO autogenerate this file
 module.exports = {
@@ -23,4 +24,5 @@ module.exports = {
   tap,
   reporting,
   reportingDetails,
+  settings,
 };
