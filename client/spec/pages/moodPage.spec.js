@@ -74,20 +74,20 @@ describe('The Mood Page', () => {
         expect(storage.myData.mood[storage.myData.mood.length - 1]).toEqual(3);
       });
     });
-    describe('face', () => {
-      it('should take the user to the response page', () => {
-        spyOn(window.App, 'navigate');
-        page.configureButtons();
-        eventHub.trigger('face');
-        expect(window.App.navigate).toHaveBeenCalledWith('response');
-      });
-      it('should read default mood values from storage', () => {
-        expect(storage.myData.mood[0]).toEqual(100);
-      });
-      it('should read the last mood variable as 4', () => {
-        expect(storage.myData.mood[storage.myData.mood.length - 1]).toEqual(4);
-      });
-    });
+    // describe('face', () => {
+    //   it('should take the user to the response page', () => {
+    //     spyOn(window.App, 'navigate');
+    //     page.configureButtons();
+    //     eventHub.trigger('face');
+    //     expect(window.App.navigate).toHaveBeenCalledWith('response');
+    //   });
+    //   it('should read default mood values from storage', () => {
+    //     expect(storage.myData.mood[0]).toEqual(100);
+    //   });
+    //   it('should read the last mood variable as 4', () => {
+    //     expect(storage.myData.mood[storage.myData.mood.length - 1]).toEqual(4);
+    //   });
+    // });
   });
 
 

@@ -1,22 +1,29 @@
-.flex-container {
-    display: -webkit-flex;
-    display: flex;
-    width: 400px;
-    height: 250px;
-    background-color: lightgrey;
+.top-button {
+  position: absolute;
+  top: 0px;
+  left: 48px;
 }
 
-.top {
-  height: 33.3%;
-}
-.right {
-
-}
-
-.left {
-
+.left-button {
+  position: absolute;
+  top: 41px;
+  left: 0px;
 }
 
-.bottom {
+.right-button {
+  position: absolute;
+  top: 41px;
+  left: 98px;
+}
 
+.bottom-button {
+  position: absolute;
+  top: 87px;
+  left: 48px;
+}
+
+.middle-text {
+  position: absolute;
+  top: 41px;
+  left: 48px;
 }
