@@ -18,11 +18,9 @@ const reportingSelectionPage = Page.extend({
   template,
 
   scrollUp() {
-    if (currentOrgIndex === 0) {
-      currentOrgIndex = this.organisationNames.length - 1;
-    } else {
-      currentOrgIndex = ((currentOrgIndex - 1) % this.organisationNames.length);
-    }
+    const orgsLen = this.organisationNames.length;
+    // Javascript modulo is wonky: -1 % 3 == -1
+    currentOrgIndex = (((currentOrgIndex - 1) % orgsLen) + orgsLen) % orgsLen;
 
     this.$el.html(this.template({ organisation: this.organisationNames[currentOrgIndex] }));
     return this;

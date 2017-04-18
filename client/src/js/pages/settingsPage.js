@@ -18,11 +18,9 @@ const settingsPage = Page.extend({
   template,
 
   scrollUp() {
-    if (currentGenderIndex === 0) {
-      currentGenderIndex = this.genderOptions.length - 1;
-    } else {
-      currentGenderIndex = ((currentGenderIndex - 1) % this.genderOptions.length);
-    }
+    // Javascript modulo is wonky: -1 % 3 == -1
+    const gendLen = this.genderOptions.length;
+    currentGenderIndex = (((currentGenderIndex - 1) % gendLen) + gendLen) % gendLen;
 
     this.$el.html(this.template({ genderOption: this.genderOptions[currentGenderIndex] }));
     return this;
