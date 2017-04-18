@@ -61,17 +61,11 @@ describe('The Mood Page', () => {
       });
     });
     describe('top', () => {
-      it('should take the user to the response page', () => {
+      it('should take the user to the tapPage', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('top');
-        expect(window.App.navigate).toHaveBeenCalledWith('response');
-      });
-      it('should read default mood values from storage', () => {
-        expect(storage.myData.mood[0]).toEqual(100);
-      });
-      it('should read the last mood variable as 3', () => {
-        expect(storage.myData.mood[storage.myData.mood.length - 1]).toEqual(3);
+        expect(window.App.navigate).toHaveBeenCalledWith('tap');
       });
     });
     // describe('face', () => {

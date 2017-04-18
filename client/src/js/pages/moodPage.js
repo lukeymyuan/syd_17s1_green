@@ -2,7 +2,7 @@ const Page = require('watch_framework').Page;
 const template = require('../../templates/pages/moodSelector.hbs');
 const storage = require('../../storage');
 
-window.storage = storage;
+window.storage = storage; // Just for debugging
 
 const moodPage = Page.extend({
 
@@ -10,10 +10,9 @@ const moodPage = Page.extend({
   template,
   buttonEvents: {
     right: 'goToResponse_0',
-    top: 'goToResponse_3',
+    top: 'goToTap',
     bottom: 'goToResponse_1',
     left: 'goToResponse_2',
-    face: 'goToResponse_4',
   },
 
   goToResponse_0() {
@@ -28,13 +27,9 @@ const moodPage = Page.extend({
     storage.myData.mood.push(2);
     window.App.navigate('response');
   },
-  goToResponse_3() {
+  goToTap() {
     storage.myData.mood.push(3);
-    window.App.navigate('response');
-  },
-  goToResponse_4() {
-    storage.myData.mood.push(4);
-    window.App.navigate('response');
+    window.App.navigate('tap');
   },
   render() {
     this.$el.html(this.template({ mood: storage.myData.mood[0] }));

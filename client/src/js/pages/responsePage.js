@@ -12,19 +12,23 @@ const responsePage = Page.extend({
   template,
 
   buttonEvents: {
-    face: 'goToHomePage',
+    face: 'goToTap',
+    top: 'goToTap',
   },
-
   responses: {
-    0: ['response 0.0', 'response 0.1', 'response 0.2'], // don't record
-    1: ['Go and seek help, call 123456'],                 // very sad
-    2: ['I hope you feel better soon'], // slightly sad
-    3: ['Good to know'], // slightly happy
-    4: ['Awesome'], // very happy
+    0: ['Good for you', 'Keep on smiling', 'Thats amazing, have a beautiful day'], // Happy
+    1: ['I hope you feel better soon', 'Keep your chin up champ', 'You are hot like sunrise'],                 // Confused
+    2: ['Go and seek help, call 123456. Tap to continue'], // Unhappy
   },
 
-  goToHomePage() {
-    window.App.navigate('home');
+  goToTap() {
+    const storageLen = storage.myData.mood.length - 1;
+    option = storage.myData.mood[storageLen];
+    if (option === 2) {
+      window.App.navigate('reporting');
+    } else {
+      window.App.navigate('tap');
+    }
   },
 
   render() {

@@ -16,11 +16,20 @@ describe('The Response Page', () => {
   });
 
   describe('clicking the watch face', () => {
-    it('should navigate back to the main menu', () => {
+    it('should take the user to the tapPage (Home)', () => {
       spyOn(window.App, 'navigate');
       page.configureButtons();
       eventHub.trigger('face');
-      expect(window.App.navigate).toHaveBeenCalledWith('home');
+      expect(window.App.navigate).toHaveBeenCalledWith('tap');
+    });
+  });
+
+  describe('clicking the top button', () => {
+    it('should take the user to the tapPage (Home)', () => {
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('top');
+      expect(window.App.navigate).toHaveBeenCalledWith('tap');
     });
   });
 });
