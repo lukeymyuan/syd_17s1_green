@@ -22,6 +22,15 @@ describe('The Tap Page', () => {
         expect(window.App.navigate).toHaveBeenCalledWith('home');
       });
     });
+
+    describe('bottom', () => {
+      it('should take the user to the reporting selection page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('bottom');
+        expect(window.App.navigate).toHaveBeenCalledWith('reporting');
+      });
+    });
   });
   describe('rendering', () => {
     it('should produce the correct HTML', () => {

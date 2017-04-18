@@ -48,14 +48,6 @@ describe('The Home Page', () => {
       });
     });
 */
-    describe('bottom', () => {
-      it('should scroll the watch face down', () => {
-        spyOn(page, 'scrollDown');
-        page.configureButtons();
-        eventHub.trigger('bottom');
-        expect(page.scrollDown).toHaveBeenCalled();
-      });
-    });
   });
 
   describe('rendering', () => {

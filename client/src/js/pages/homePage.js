@@ -12,7 +12,6 @@ const homePage = Page.extend({
   buttonEvents: {
     right: 'goToMoodPage',
     top: 'scrollUp',
-    bottom: 'scrollDown',
     left: 'goToResponse',
     face: 'updateMessage',
   },

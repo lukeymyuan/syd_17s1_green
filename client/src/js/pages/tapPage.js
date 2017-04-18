@@ -6,10 +6,15 @@ const tapPage = Page.extend({
   id: 'tap',
   template,
   buttonEvents: {
+    bottom: 'goToReportingPage',
     face: 'goToMessage',
   },
   goToMessage() {
     window.App.navigate('home');
+  },
+
+  goToReportingPage() {
+    window.App.navigate('reporting');
   },
 
   initialize() {
