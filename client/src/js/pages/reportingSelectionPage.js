@@ -13,6 +13,7 @@ const reportingSelectionPage = Page.extend({
     top: 'scrollUp',
     bottom: 'scrollDown',
     face: 'pickOrg',
+    left: 'goToTap',
   },
   organisationNames: ['organisation 1', 'organisation 2', 'organisation 3'],
   template,
@@ -35,6 +36,10 @@ const reportingSelectionPage = Page.extend({
   pickOrg() {
     storage.reportingDetailsSelected.selected.push(currentOrgIndex);
     window.App.navigate('reportingDetails');
+  },
+
+  goToTap() {
+    window.App.navigate('tap');
   },
 
   render() {

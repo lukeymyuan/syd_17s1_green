@@ -23,4 +23,12 @@ describe('The Reporting Selection Page', () => {
       expect(window.App.navigate).toHaveBeenCalledWith('reportingDetails');
     });
   });
+  describe('clicking the left button', () => {
+    it('should go to tap page', () => {
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('left');
+      expect(window.App.navigate).toHaveBeenCalledWith('tap');
+    });
+  });
 });
