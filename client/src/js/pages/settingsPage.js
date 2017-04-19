@@ -12,6 +12,7 @@ const settingsPage = Page.extend({
   buttonEvents: {
     top: 'scrollUp',
     bottom: 'scrollDown',
+    left: 'goToTap',
     face: 'pickGender',
   },
   genderOptions: ['Male', 'Female', 'Non-Binary', 'Prefer not to say'],
@@ -34,6 +35,10 @@ const settingsPage = Page.extend({
 
   pickOrg() {
     storage.settings.gender.push(currentGenderIndex);
+    window.App.navigate('tap');
+  },
+
+  goToTap() {
     window.App.navigate('tap');
   },
 
