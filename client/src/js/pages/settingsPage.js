@@ -33,7 +33,7 @@ const settingsPage = Page.extend({
     return this;
   },
 
-  pickOrg() {
+  pickGender() {
     storage.settings.gender.push(currentGenderIndex);
     window.App.navigate('tap');
   },
