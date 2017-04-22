@@ -10,6 +10,11 @@ const tapPage = Page.extend({
     face: 'goToMessage',
     right: 'goToSettings',
     top: 'goToMood',
+    left: 'goToTime',
+  },
+
+  goToTime() {
+    window.App.navigate('time');
   },
   goToMessage() {
     window.App.navigate('home');

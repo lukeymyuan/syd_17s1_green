@@ -9,6 +9,7 @@ const tap = require('./tapPage');
 const reporting = require('./reportingSelectionPage');
 const reportingDetails = require('./reportingDetailsPage');
 const settings = require('./settingsPage');
+const time = require('./timePage');
 
 // TODO autogenerate this file
 module.exports = {
@@ -23,4 +24,5 @@ module.exports = {
   reporting,
   reportingDetails,
   settings,
+  time,
 };
