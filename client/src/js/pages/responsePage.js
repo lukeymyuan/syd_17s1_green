@@ -10,7 +10,7 @@ const responsePage = Page.extend({
   id: 'response',
 
   template,
-
+  tap_msg: '',
   buttonEvents: {
     face: 'goToTap',
     top: 'goToTap',
@@ -18,7 +18,7 @@ const responsePage = Page.extend({
   responses: {
     0: ['Good for you', 'Keep on smiling', 'Thats amazing, have a beautiful day'], // Happy
     1: ['I hope you feel better soon', 'Keep your chin up champ', 'You are hot like sunrise'],                 // Confused
-    2: ['Go and seek help, call 123456. Tap to continue'], // Unhappy
+    2: ['Go and seek help, call 123456.'], // Unhappy
   },
 
   goToTap() {
@@ -37,8 +37,11 @@ const responsePage = Page.extend({
     // Generate an index between 0 - 2
     const len = this.responses[option].length;
     const index = Math.floor(Math.random() * len);
+    if (option === 2) {
+      this.tap_msg = 'Tap to continue';
+    }
 
-    this.$el.html(this.template({ response: this.responses[option][index] }));
+    this.$el.html(this.template({ response: this.responses[option][index], tap: this.tap_msg }));
     return this;
   },
 });
