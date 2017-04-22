@@ -18,10 +18,6 @@ const homePage = Page.extend({
   messages: ['Message 0', 'Message 1', 'Message 2', 'Message 3', 'Message 4'],
   prevIndex: 1,
 
-  goToContacts() {
-    window.App.navigate('contacts');
-  },
-
   goToMoodPage() {
     window.App.navigate('mood');
   },
