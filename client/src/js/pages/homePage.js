@@ -3,6 +3,10 @@ const Page = require('watch_framework').Page;
 
 const template = require('../../templates/pages/home.hbs');
 const $ = require('jquery');
+const storage = require('../../storage');
+
+const genderStorage = storage.settings.gender;
+const genderOptions = storage.settings.genderOptions;
 
 const homePage = Page.extend({
 
@@ -41,7 +45,8 @@ const homePage = Page.extend({
   },
 
   render() {
-    const gender = 'unspecified';
+    const gendLen = genderStorage.length;
+    const gender = genderOptions[genderStorage[gendLen - 1]];
     let genderMessage = '';
 
     const maleLength = this.responses.male.length;
@@ -55,12 +60,12 @@ const homePage = Page.extend({
 
     let messageIndex;
     switch (gender) {
-      case 'male':
+      case 'Male':
         // Show a male message
         messageIndex = Math.floor(Math.random() * maleLength);
         genderMessage = this.responses.male[messageIndex];
         break;
-      case 'female':
+      case 'Female':
           // Show a female message
         messageIndex = Math.floor(Math.random() * femaleLength);
         genderMessage = this.responses.female[messageIndex];

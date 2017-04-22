@@ -1,7 +1,10 @@
 const Page = require('watch_framework').Page;
 
 const template = require('../../templates/pages/genderMessagePage.hbs');
+const storage = require('../../storage');
 
+const genderStorage = storage.settings.gender;
+const genderOptions = storage.settings.genderOptions;
 const responsePage = Page.extend({
 
   id: 'genderMessagePage',
@@ -23,8 +26,9 @@ const responsePage = Page.extend({
   },
 
   render() {
-    const gender = 'unspecified'; // will change from gender setting page later
-    // Generate an index between 0 - 9
+    const gendLen = genderStorage.length;
+
+    const gender = genderOptions[genderStorage[gendLen - 1]];
     let genderMessage = '';
 
     const maleLength = this.responses.male.length;
@@ -38,12 +42,12 @@ const responsePage = Page.extend({
 
     let messageIndex;
     switch (gender) {
-      case 'male':
+      case 'Male':
         // Show a male message
         messageIndex = Math.floor(Math.random() * maleLength);
         genderMessage = this.responses.male[messageIndex];
         break;
-      case 'female':
+      case 'Female':
           // Show a female message
         messageIndex = Math.floor(Math.random() * femaleLength);
         genderMessage = this.responses.female[messageIndex];
