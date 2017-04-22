@@ -25,7 +25,6 @@ const responsePage = Page.extend({
   render() {
     const gender = 'unspecified'; // will change from gender setting page later
     // Generate an index between 0 - 9
-    const index = Math.floor(Math.random() * 9);
     let genderMessage = '';
 
     const maleLength = this.responses.male.length;
@@ -37,26 +36,17 @@ const responsePage = Page.extend({
     // let prevMale = 0;
     // let prevfemale = 0;
 
+    let messageIndex;
     switch (gender) {
       case 'male':
-        if (index >= 0 && index <= 2) {
-          // Show a male message
-          const messageIndex = Math.floor(Math.random() * maleLength);
-          genderMessage = this.responses.male[messageIndex];
-        } else {
-          // Show an unspecified message
-          genderMessage = this.responses.unspecified[unspecifiedIndex];
-        }
+        // Show a male message
+        messageIndex = Math.floor(Math.random() * maleLength);
+        genderMessage = this.responses.male[messageIndex];
         break;
       case 'female':
-        if (index >= 0 && index <= 4) {
           // Show a female message
-          const messageIndex = Math.floor(Math.random() * femaleLength);
-          genderMessage = this.responses.female[messageIndex];
-        } else {
-          // Show an unspecified message
-          genderMessage = this.responses.unspecified[unspecifiedIndex];
-        }
+        messageIndex = Math.floor(Math.random() * femaleLength);
+        genderMessage = this.responses.female[messageIndex];
         break;
       default:
         genderMessage = this.responses.unspecified[unspecifiedIndex];
