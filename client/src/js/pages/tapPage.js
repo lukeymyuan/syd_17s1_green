@@ -9,6 +9,7 @@ const tapPage = Page.extend({
     bottom: 'goToReportingPage',
     face: 'goToMessage',
     right: 'goToSettings',
+    top: 'goToMood',
   },
   goToMessage() {
     window.App.navigate('home');
@@ -20,6 +21,10 @@ const tapPage = Page.extend({
 
   goToReportingPage() {
     window.App.navigate('reporting');
+  },
+
+  goToMood() {
+    window.App.navigate('mood');
   },
 
   initialize() {
