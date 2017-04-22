@@ -14,12 +14,16 @@ const responsePage = Page.extend({
     unspecified: ['unspecified msg 1', 'unspecified msg 2', 'unspecified msg 3'],
   },
 
+  buttonEvents: {
+    face: 'render',
+  },
+
   goToHomePage() {
     window.App.navigate('home');
   },
 
   render() {
-    const gender = 'unspecified';
+    const gender = 'unspecified'; // will change from gender setting page later
     // Generate an index between 0 - 9
     const index = Math.floor(Math.random() * 9);
     let genderMessage = '';
