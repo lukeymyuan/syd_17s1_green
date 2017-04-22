@@ -20,7 +20,8 @@ const responsePage = Page.extend({
       'Awesome! Keep it up, sunshine!'], // Happy
     1: ['Feeling a bit down? Give yourself something to look forward to! Plan a movie or a date with friends.',
       'Not the best day? Take a break: read a book, play a game, or have a chat with a good friend.',
-      "Not feeling the best? If friends keep making you feel bad, perhaps they're not friends after all."],  // Meh
+      "Not feeling the best? If friends keep making you feel bad, perhaps they're not friends after all.",
+      'You are hot like sunrise.'],  // Meh
     2: ['Tell you what... Try giving these people a call...',
       'Sorry to hear that. Why not try talking to a professional?',
       'Oh no. Maybe these contacts will be able to help you...',
