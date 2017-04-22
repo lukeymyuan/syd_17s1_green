@@ -11,20 +11,13 @@ const reportingDetailsPage = Page.extend({
   },
   organisations: [
     {
-      name: 'Emergency Contact',
-      phone: '1234567890',
-      email: 'sample@email.com',
-      address: 'http://organisation1.com',
+      name: 'Kids Helpline',
+      phone: '1800 551 800',
+      address: 'www.kidshelpline.com.au',
     }, {
-      name: 'organisation 2',
-      phone: '1234567890',
-      email: 'sample2@email.com',
-      address: 'http://organisation2.com',
-    }, {
-      name: 'organisation 3',
-      phone: '1234567890',
-      email: 'sample@email.com',
-      address: 'http://organisation3.com',
+      name: 'NSW Police Force',
+      phone: '000',
+      address: 'www.police.nsw.gov.au',
     },
   ],
   template,
