@@ -1,4 +1,4 @@
-
+// const _ = require('underscore');
 const Page = require('watch_framework').Page;
 
 const template = require('../../templates/pages/home.hbs');
@@ -40,18 +40,33 @@ const homePage = Page.extend({
     window.App.navigate('response');
   },
 
+
+  // setInterval((myfn) => {
+  //   const d = new Date();
+  //   page.currerntDate = d;
+  //
+  // }, 60000);
+
   render() {
     const gender = 'unspecified';
     let genderMessage = '';
-
     const maleLength = this.responses.male.length;
     const femaleLength = this.responses.female.length;
     const unspecifiedLength = this.responses.unspecified.length;
     const unspecifiedIndex = Math.floor(Math.random() * unspecifiedLength);
 
+    // clearInterval();
+    //  // this will check in every 10 seconds
+    // setInterval(() => {
+    //   const d = new Date();
+    //   const hourList = [9, 12, 17];
+    //   if ((_.indexOf(hourList, d.getHours()) > -1) && (d.getMinutes() === 0)) {
+    //     window.App.navigate('mood');
+    //   }
+    // }, 60000);
     // let prevMale = 0;
     // let prevfemale = 0;
-
+    // const today = moment();
 
     let messageIndex;
     switch (gender) {
