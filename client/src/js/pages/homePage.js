@@ -79,8 +79,6 @@ const homePage = Page.extend({
     const maleLength = this.responses.male.length;
     const femaleLength = this.responses.female.length;
     const unspecifiedLength = this.responses.unspecified.length;
-<<<<<<< HEAD
-    const unspecifiedIndex = Math.floor(Math.random() * unspecifiedLength);
 
     // clearInterval();
     //  // this will check in every 10 seconds
@@ -94,8 +92,7 @@ const homePage = Page.extend({
     // let prevMale = 0;
     // let prevfemale = 0;
     // const today = moment();
-=======
->>>>>>> cf66e24ce6e12f944719ac07c47b792d7e201a5f
+
 
     let messageIndex;
     switch (gender) {
