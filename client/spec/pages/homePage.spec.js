@@ -13,30 +13,12 @@ describe('The Home Page', () => {
   });
 
   describe('button event handlers', () => {
-    describe('right', () => {
-      it('should take the user to the mood selection page', () => {
-        spyOn(window.App, 'navigate');
-        page.configureButtons();
-        eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('mood');
-      });
-    });
-
-    describe('left', () => {
-      it('should take the user to the response page', () => {
-        spyOn(window.App, 'navigate');
-        page.configureButtons();
-        eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('response');
-      });
-    });
-
     describe('top', () => {
-      it('should scroll the watch face up', () => {
-        spyOn(page, 'scrollUp');
+      it('should return to tap page', () => {
+        spyOn(page, 'goToTap');
         page.configureButtons();
         eventHub.trigger('top');
-        expect(page.scrollUp).toHaveBeenCalled();
+        expect(page.goToTap).toHaveBeenCalled();
       });
     });
 
