@@ -15,7 +15,7 @@ const reportingSelectionPage = Page.extend({
     face: 'pickOrg',
     left: 'goToTap',
   },
-  organisationNames: ['organisation 1', 'organisation 2', 'organisation 3'],
+  organisationNames: ['Kids Helpline', 'NSW Police Force'],
   template,
 
   scrollUp() {

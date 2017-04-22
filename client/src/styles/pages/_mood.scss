@@ -39,24 +39,14 @@
   font-size: 29px;
 }
 
-.response-text-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top: 17%;
-  left: 1%;
-  width: 254px;
-  height: 200px;
-  text-align: center;
-  // background-color: red; // Just for testing
+.tap-center {
+  
 }
 
-.response-text-content {
-  font-size: 29px;
-}
-
-.tap-text-content {
-  font-size: 20;
+.tap-bg {
+  background-image: url("../images/tap.png");
+  background-size: cover;
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
 }

@@ -50,11 +50,11 @@ describe('The Tap Page', () => {
       });
     });
   });
-  describe('rendering', () => {
-    it('should produce the correct HTML', () => {
-      page.render();
-
-      expect(page.$el).toContainText('Tap Me');
-    });
-  });
+  // describe('rendering', () => {
+  //   it('should produce the correct HTML', () => {
+  //     page.render();
+  //
+  //     expect(page.$el).toContainText('Tap Me');
+  //   });
+  // });
 });
