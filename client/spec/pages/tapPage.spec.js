@@ -32,6 +32,15 @@ describe('The Tap Page', () => {
       });
     });
 
+    describe('top', () => {
+      it('should take the user to the mood diary page', () => {
+        spyOn(window.App, 'navigate');
+        page.configureButtons();
+        eventHub.trigger('top');
+        expect(window.App.navigate).toHaveBeenCalledWith('mood');
+      });
+    });
+
     describe('right', () => {
       it('should take the user to the settings page', () => {
         spyOn(window.App, 'navigate');
