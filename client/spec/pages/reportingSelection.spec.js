@@ -11,7 +11,7 @@ describe('The Reporting Selection Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render({ organisation: 'organisation 1' });
-      expect(page.$el).toContainHtml('<h1>organisation 1</h1>');
+      expect(page.$el).toContainHtml('<div id="org-name">organisation 1</div>');
     });
   });
 

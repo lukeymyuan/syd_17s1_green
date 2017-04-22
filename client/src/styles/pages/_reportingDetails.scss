@@ -1,11 +1,4 @@
 
-.left-button {
-  position: absolute;
-  top: 41px;
-  left: 0px;
-}
-
-
 
 .text-container {
   position: relative;
@@ -13,4 +6,24 @@
   margin-top:15%;
   margin-left: auto;
   margin-right: auto;
+  text-size:4;
+}
+
+.text-container #org-name {
+  font-size:5;
+  font-weight:500;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.text-container #org-phone {
+  font-size:7;
+  margin-bottom: 0em;
+  margin-top: 0em;
+}
+
+.text-container #org-email, #org-address {
+  font-size: 10 !important;
+  margin-bottom: 0em;
+  margin-top: 0em;
 }
