@@ -11,9 +11,7 @@ const homePage = Page.extend({
   template,
 
   buttonEvents: {
-    right: 'goToMoodPage',
-    top: 'scrollUp',
-    left: 'goToResponse',
+    top: 'goToTap',
     face: 'render',
     bottom: 'scrollDown',
   },
@@ -29,8 +27,8 @@ const homePage = Page.extend({
     window.App.navigate('mood');
   },
 
-  scrollUp() {
-    $('#watch-face').animate({ scrollTop: '-=70px' });
+  goToTap() {
+    window.App.navigate('tap');
   },
 
   scrollDown() {
