@@ -26,7 +26,7 @@ const homePage = Page.extend({
     unspecified: ['unspecified msg 1', 'unspecified msg 2', 'unspecified msg 3'],
   },
 
-  prevIndex: 1,
+  prevIndex: 0,
 
   goToMoodPage() {
     window.App.navigate('mood');
@@ -52,7 +52,7 @@ const homePage = Page.extend({
     const maleLength = this.responses.male.length;
     const femaleLength = this.responses.female.length;
     const unspecifiedLength = this.responses.unspecified.length;
-    const unspecifiedIndex = Math.floor(Math.random() * unspecifiedLength);
+    // const unspecifiedIndex = Math.floor(Math.random() * unspecifiedLength);
 
     // let prevMale = 0;
     // let prevfemale = 0;
@@ -63,15 +63,29 @@ const homePage = Page.extend({
       case 'Male':
         // Show a male message
         messageIndex = Math.floor(Math.random() * maleLength);
+        while (messageIndex === this.prevIndex) {
+          messageIndex = Math.floor(Math.random() * maleLength);
+        }
+        this.prevIndex = messageIndex;
         genderMessage = this.responses.male[messageIndex];
         break;
       case 'Female':
           // Show a female message
         messageIndex = Math.floor(Math.random() * femaleLength);
+        while (messageIndex === this.prevIndex) {
+          messageIndex = Math.floor(Math.random() * femaleLength);
+        }
+        this.prevIndex = messageIndex;
         genderMessage = this.responses.female[messageIndex];
         break;
       default:
-        genderMessage = this.responses.unspecified[unspecifiedIndex];
+        // Show an unspecified message
+        messageIndex = Math.floor(Math.random() * unspecifiedLength);
+        while (messageIndex === this.prevIndex) {
+          messageIndex = Math.floor(Math.random() * unspecifiedLength);
+        }
+        this.prevIndex = messageIndex;
+        genderMessage = this.responses.unspecified[messageIndex];
         break;
     }
     this.$el.html(this.template({ message: genderMessage }));
